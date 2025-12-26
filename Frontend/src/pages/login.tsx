@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import API from '../lib/api';
 
 interface LoginProps {
@@ -6,6 +7,7 @@ interface LoginProps {
 }
 
 export default function Login({ onLoginSuccess }: LoginProps) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -18,8 +20,10 @@ export default function Login({ onLoginSuccess }: LoginProps) {
       const res = await API.post('/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('userId', res.data.user?.id || res.data.user?._id);
+
       onLoginSuccess();
-    } catch (err) {
+      navigate('/my-recipes'); // 👈 redirect after login
+    } catch {
       setError('Invalid email or password');
     }
   };
