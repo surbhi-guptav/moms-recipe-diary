@@ -23,7 +23,7 @@ export default function WhatCanICook() {
   };
 
   const addIngredient = () => {
-    const trimmed = input.trim().replace(/,/g, '');
+    const trimmed = input.trim().toLowerCase().replace(/,/g, '');
     if (trimmed && !ingredients.includes(trimmed)) {
       setIngredients([...ingredients, trimmed]);
       setInput('');
