@@ -110,7 +110,12 @@ export default function LandingPage({
                   title={recipe.title}
                   description={recipe.memoryNote || ""}
                   category={recipe.category}
-                  imageUrl={recipe.imageUrl || "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"}
+                  imageUrl={
+                        recipe.imageUrl ||
+                        (recipe as any).image_url ||
+                        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"
+}
+
                   likes={recipe.likes}
                 />
               ))}
