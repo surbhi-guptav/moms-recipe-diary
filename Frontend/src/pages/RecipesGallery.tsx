@@ -137,7 +137,7 @@ export default function RecipesGallery({ recipes: initialRecipes }: RecipesGalle
                     title={recipe.title}
                     description={recipe.memoryNote || 'A delicious family recipe'}
                     category={recipe.category}
-                    imageUrl=""
+                    imageUrl={recipe.imageUrl || "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"}
                     likes={recipe.likes}
                 />
               </motion.div>
