@@ -245,35 +245,26 @@ export const addComment = async (req, res) => {
 export const getRecipesCanCook = async (req, res) => {
   try {
     const { ingredients } = req.body;
-    
+
     if (!ingredients || !Array.isArray(ingredients) || ingredients.length === 0) {
-        return res.status(400).json({ message: "Please provide a list of ingredients." });
+      return res.status(400).json({ message: "Please provide a list of ingredients." });
     }
 
-    // Normalize user ingredients for case-insensitive comparison
-    const userIngredientsLower = ingredients.map(i => i.toLowerCase().trim());
-    const userIngredientsRegex = userIngredientsLower.map(i => new RegExp(`^${i}$`, "i"));
+    const userIngredients = ingredients.map(i => i.toLowerCase().trim());
 
-    console.log("Cooking with:", userIngredientsLower);
+    console.log("Cooking with:", userIngredients);
 
-    // 1. Pre-filter: Find recipes that contain AT LEAST ONE of the user's ingredients.
-    // This removes recipes with empty ingredients and completely unrelated recipes.
-    const candidates = await Recipe.find({
-        ingredients: { $in: userIngredientsRegex }
+    const recipes = await Recipe.find();
+
+    const validRecipes = recipes.filter(recipe => {
+      const recipeIngredients = recipe.ingredients.map(i => i.toLowerCase());
+
+      return userIngredients.every(userIng =>
+        recipeIngredients.some(recipeIng => recipeIng.includes(userIng))
+      );
     });
 
-    // 2. Strict Subset Filtering in JS
-    // We want recipes where EVERY ingredient in the recipe exists in the user's list (case-insensitive)
-    const validRecipes = candidates.filter(recipe => {
-        return recipe.ingredients.every(recipeIng => {
-            const rIngLower = recipeIng.toLowerCase().trim();
-            // Check if this recipe ingredient exists in user list
-            // We use includes or regex match
-            return userIngredientsLower.some(uIng => uIng === rIngLower || rIngLower.includes(uIng));
-        });
-    });
-
-    console.log(`Found ${candidates.length} candidates, filtered to ${validRecipes.length} valid recipes.`);
+    console.log(`Found ${validRecipes.length} valid recipes.`);
 
     res.json(validRecipes);
   } catch (err) {
