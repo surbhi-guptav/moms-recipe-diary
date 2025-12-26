@@ -23,6 +23,12 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
     Boolean(localStorage.getItem("token"))
   );
+  useEffect(() => {
+  if (isAuthenticated && location.pathname === "/login") {
+    window.history.replaceState(null, "", "/my-recipes");
+  }
+}, [isAuthenticated, location.pathname]);
+
 
   useEffect(() => {
     fetchRecipes().then(setRecipes);
@@ -56,7 +62,18 @@ function App() {
               <Route path="/recipes/:id/edit" element={isAuthenticated ? <PageTransition><EditRecipe /></PageTransition> : <Navigate to="/login" />} />
               
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-              <Route path="/login" element={<PageTransition><Login onLoginSuccess={() => setIsAuthenticated(true)} /></PageTransition>} />
+              <Route
+                  path="/login"
+                  element={
+                    isAuthenticated ? (
+                      <Navigate to="/my-recipes" />
+                    ) : (
+                      <PageTransition>
+                        <Login onLoginSuccess={() => setIsAuthenticated(true)} />
+                      </PageTransition>
+                    )
+                  }
+                />
               <Route path="/register" element={<PageTransition><Register onRegisterSuccess={() => window.location.href = "/login"} /></PageTransition>} />
             </Routes>
           </AnimatePresence>
