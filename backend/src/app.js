@@ -5,7 +5,6 @@ import recipeRoutes from "./routes/recipeRoutes.js"
 
 const app = express();
 
-import cors from "cors";
 
 app.use(cors({
   origin: [

@@ -258,13 +258,33 @@ export const getRecipesCanCook = async (req, res) => {
 
     const validRecipes = recipes.filter(recipe => {
       const recipeIngredients = recipe.ingredients.map(i => i.toLowerCase());
+      
+      // Debug log for first few recipes to see what's happening
+      // if (Math.random() < 0.1) console.log(`Checking recipe: ${recipe.title} with ingredients:`, recipeIngredients);
 
-      return userIngredients.every(userIng =>
-        recipeIngredients.some(recipeIng => recipeIng.includes(userIng))
-      );
+      const isMatch = userIngredients.every(userIng => {
+          const found = recipeIngredients.some(recipeIng => recipeIng.includes(userIng));
+          // if (!found) console.log(`  Failed to find user ingredient: '${userIng}' in recipe '${recipe.title}'`);
+          return found;
+      });
+      return isMatch;
     });
 
     console.log(`Found ${validRecipes.length} valid recipes.`);
+    
+    // If no recipes found, log why matching failed for the first recipe (if any exist)
+    if (validRecipes.length === 0 && recipes.length > 0) {
+        console.log("DEBUG: No matches found. Analyzing first recipe failure:");
+        const first = recipes[0];
+        const firstIngs = first.ingredients.map(i => i.toLowerCase());
+        console.log("Recipe Title:", first.title);
+        console.log("Recipe Ingredients:", firstIngs);
+        console.log("User Ingredients:", userIngredients);
+        userIngredients.forEach(u => {
+            const has = firstIngs.some(r => r.includes(u));
+            console.log(`  Has '${u}'? ${has}`);
+        });
+    }
 
     res.json(validRecipes);
   } catch (err) {

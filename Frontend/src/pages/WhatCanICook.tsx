@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ChefHat, X, Loader2 } from 'lucide-react';
-import { fetchCanCook, Recipe } from '../lib/api';
+import { fetchCanCook, fetchRecipes, Recipe } from '../lib/api';
 import RecipeCard from '../components/RecipeCard';
 
 export default function WhatCanICook() {
@@ -23,11 +23,20 @@ export default function WhatCanICook() {
   };
 
   const addIngredient = () => {
-    const trimmed = input.trim().toLowerCase().replace(/,/g, '');
-    if (trimmed && !ingredients.includes(trimmed)) {
-      setIngredients([...ingredients, trimmed]);
-      setInput('');
+    // Split by comma, newline, or bullet point
+    const parts = input.split(/[,\n•]/);
+    
+    // Process each part: trim, lowercase, remove empty, and check for duplicates in existing state
+    const validIngredients = parts
+      .map(part => part.trim().toLowerCase())
+      .filter(part => part.length > 0 && !ingredients.includes(part));
+
+    if (validIngredients.length > 0) {
+      // Remove duplicates within the new batch itself
+      const uniqueNew = [...new Set(validIngredients)];
+      setIngredients([...ingredients, ...uniqueNew]);
     }
+    setInput('');
   };
 
   const removeIngredient = (ing: string) => {
@@ -40,8 +49,21 @@ export default function WhatCanICook() {
     setIsLoading(true);
     setHasSearched(true);
     try {
-      const data = await fetchCanCook(ingredients);
-      setRecipes(data);
+      // Fetch ALL recipes and filter client-side to ensure robust matching even if backend is stale
+      const allRecipes = await fetchRecipes();
+      
+      const userIngredients = ingredients.map(i => i.toLowerCase().trim());
+      
+      const validRecipes = allRecipes.filter(recipe => {
+        const recipeIngredients = recipe.ingredients.map(i => i.toLowerCase());
+
+        return userIngredients.every(userIng =>
+          recipeIngredients.some(recipeIng => recipeIng.includes(userIng))
+        );
+      });
+
+      console.log(`Client-side match: Found ${validRecipes.length} recipes for`, userIngredients);
+      setRecipes(validRecipes);
     } catch (error) {
       console.error("Failed to find recipes:", error);
       setRecipes([]);
