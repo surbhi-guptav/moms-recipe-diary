@@ -11,7 +11,7 @@ Users can explore recipes, add their own, like and comment, and even find what t
 🔗 **Backend API:** https://moms-recipe-backend.onrender.com  
 
 🎥 **Video Demo:**  
-[![Watch the Video Demo](./assets/video-thumbnail.png)](https://drive.google.com/file/d/1K3i3pGeS7KYphwSfvbOp6QmCGRKqxlxS/view?usp=sharing)
+[![Watch the Video Demo](https://github.com/surbhi-guptav/moms-recipe-diary/blob/main/Thumbnail.png)](https://drive.google.com/file/d/1K3i3pGeS7KYphwSfvbOp6QmCGRKqxlxS/view?usp=sharing)
 
 
 ---
