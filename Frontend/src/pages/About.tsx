@@ -2,13 +2,13 @@ import { Heart, BookHeart, Users } from 'lucide-react';
 
 export default function About() {
   return (
-    <div className="min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-6 max-w-4xl">
-        <div className="text-center mb-12 animate-fade-slide">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-ink">
+    <div className="min-h-screen pt-24 md:pt-32 pb-12 md:pb-20">
+      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+        <div className="text-center mb-8 md:mb-12 animate-fade-slide">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 md:mb-6 text-ink leading-tight">
             About Mom's Recipe Diary
           </h1>
-          <p className="text-2xl text-ink text-opacity-80 leading-relaxed">
+          <p className="text-xl md:text-2xl text-ink text-opacity-80 leading-relaxed max-w-2xl mx-auto">
             A labor of love dedicated to preserving culinary heritage
           </p>
         </div>

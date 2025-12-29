@@ -157,11 +157,11 @@ export default function CookingSession({ steps, onExit }: CookingSessionProps) {
         </div>
 
         {/* Footer Controls */}
-        <div className="p-6 md:p-8 border-t border-golden border-opacity-20 flex justify-between items-center bg-parchment">
+        <div className="p-4 md:p-8 border-t border-golden border-opacity-20 flex flex-col-reverse md:flex-row justify-between items-center bg-parchment gap-4">
             <button 
                 onClick={() => setStepIndex(i => i - 1)}
                 disabled={stepIndex === 0}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold text-lg transition-all ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold text-lg transition-all w-full md:w-auto justify-center ${
                     stepIndex === 0 
                         ? 'opacity-30 cursor-not-allowed text-ink' 
                         : 'hover:bg-black hover:bg-opacity-5 text-ink'
@@ -173,14 +173,14 @@ export default function CookingSession({ steps, onExit }: CookingSessionProps) {
             {stepIndex === steps.length - 1 ? (
                 <button 
                     onClick={onExit}
-                    className="flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-green-700 hover:scale-105 transition-all shadow-lg"
+                    className="flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-green-700 hover:scale-105 transition-all shadow-lg w-full md:w-auto justify-center"
                 >
                     Finish Cooking <Check size={24} />
                 </button>
             ) : (
                 <button 
                     onClick={() => setStepIndex(i => i + 1)}
-                    className="flex items-center gap-2 bg-clay text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-opacity-90 hover:scale-105 transition-all shadow-lg"
+                    className="flex items-center gap-2 bg-clay text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-opacity-90 hover:scale-105 transition-all shadow-lg w-full md:w-auto justify-center"
                 >
                     Next Step <ChevronRight size={24} />
                 </button>

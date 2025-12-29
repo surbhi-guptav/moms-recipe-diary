@@ -1,0 +1,468 @@
+[
+  {
+    "title": "Paneer Bhurji",
+    "category": "Daily",
+    "ingredients": [
+      "200 g paneer, crumbled",
+      "2 tbsp oil",
+      "1 onion, finely chopped",
+      "1 tomato, finely chopped",
+      "1 green chili, finely chopped",
+      "1 tsp ginger garlic paste",
+      "1/2 tsp turmeric powder",
+      "1 tsp red chili powder",
+      "1 tsp coriander powder",
+      "Salt to taste",
+      "Fresh coriander leaves"
+    ],
+    "steps": [
+      "Heat oil in a pan on medium heat.",
+      "Add chopped onions and sauté until light golden.",
+      "Add ginger garlic paste and cook until raw smell disappears.",
+      "Add green chili and chopped tomatoes.",
+      "Cook until tomatoes become soft and oil separates slightly.",
+      "Add turmeric, red chili, coriander powder, and salt.",
+      "Mix spices well and cook for 30 seconds.",
+      "Add crumbled paneer and mix gently.",
+      "Cook for 5 minutes while stirring occasionally.",
+      "Garnish with fresh coriander and serve hot with roti."
+    ],
+    "memoryNote": "Quick paneer dish mom makes for lunch.",
+    "imageUrl": "https://th.bing.com/th/id/OIP.-HHc82tSHrVwKP86KVK8OQHaFj?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "title": "Vegetable Pulao",
+    "category": "Traditional",
+    "ingredients": [
+      "1 cup basmati rice",
+      "2 cups water",
+      "2 tbsp ghee",
+      "1 bay leaf",
+      "2 cloves",
+      "1 cinnamon stick",
+      "1 onion, sliced",
+      "1/2 cup mixed vegetables",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Wash basmati rice thoroughly and soak for 20 minutes.",
+      "Heat ghee in a pot and add bay leaf, cloves, and cinnamon.",
+      "Add sliced onions and sauté until golden brown.",
+      "Add mixed vegetables and cook for 2 minutes.",
+      "Drain rice and add to the pot, stirring gently.",
+      "Add salt and measured water.",
+      "Bring to a boil, then cover and cook on low heat for 15 minutes.",
+      "Turn off heat and let rest for 5 minutes.",
+      "Fluff rice gently and serve hot."
+    ],
+    "memoryNote": "Aromatic rice for special lunches.",
+    "imageUrl": "https://images.pexels.com/photos/15059063/pexels-photo-15059063.jpeg"
+  },
+  {
+    "title": "Besan Chilla",
+    "category": "Daily",
+    "ingredients": [
+      "1 cup gram flour (besan)",
+      "1/4 cup chopped onion",
+      "1/4 cup chopped tomato",
+      "1 green chili, chopped",
+      "1/4 tsp turmeric",
+      "Salt to taste",
+      "Water as needed",
+      "Oil for cooking"
+    ],
+    "steps": [
+      "Take besan in a bowl and add turmeric and salt.",
+      "Add water slowly and whisk to form a smooth batter.",
+      "Add chopped onion, tomato, and green chili to batter.",
+      "Mix everything well and let rest for 5 minutes.",
+      "Heat a non-stick pan and grease lightly with oil.",
+      "Pour a ladle of batter and spread in circular motion.",
+      "Drizzle oil around edges and cook on medium heat.",
+      "Flip and cook other side until golden.",
+      "Remove from pan and repeat for remaining batter.",
+      "Serve hot with green chutney."
+    ],
+    "memoryNote": "Healthy breakfast mom often prepares.",
+    "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.L_8R_AjGF4VFCDda8OcYuwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "title": "Shahi Paneer",
+    "category": "Festival",
+    "ingredients": [
+      "200 g paneer cubes",
+      "2 tbsp butter",
+      "1 onion paste",
+      "1/2 cup tomato puree",
+      "2 tbsp cashew paste",
+      "1/2 tsp garam masala",
+      "1/2 tsp chili powder",
+      "Salt to taste",
+      "Fresh cream"
+    ],
+    "steps": [
+      "Heat butter in a pan on low heat.",
+      "Add onion paste and cook until light golden.",
+      "Add tomato puree and cook until thick.",
+      "Add cashew paste and mix well.",
+      "Add chili powder, garam masala, and salt.",
+      "Add paneer cubes gently.",
+      "Simmer for 5 minutes on low flame.",
+      "Add fresh cream and stir lightly.",
+      "Cook 2 more minutes and turn off heat.",
+      "Serve hot with naan or roti."
+    ],
+    "memoryNote": "Rich curry prepared for celebrations.",
+    "imageUrl": "https://images.pexels.com/photos/12737799/pexels-photo-12737799.jpeg"
+  },
+  {
+    "title": "Vegetable Cutlet",
+    "category": "Mom's Special",
+    "ingredients": [
+      "2 boiled potatoes",
+      "1/2 cup boiled mixed vegetables",
+      "1/4 cup breadcrumbs",
+      "1 green chili, chopped",
+      "Salt and pepper",
+      "Oil for shallow frying"
+    ],
+    "steps": [
+      "Mash boiled potatoes and vegetables in a bowl.",
+      "Add salt, pepper, and green chili.",
+      "Mix everything to form a uniform dough.",
+      "Shape into flat round patties.",
+      "Roll each patty in breadcrumbs.",
+      "Heat oil in a pan on medium heat.",
+      "Place cutlets and shallow fry until golden.",
+      "Flip and cook the other side evenly.",
+      "Remove on paper towel to drain oil.",
+      "Serve hot with ketchup or chutney."
+    ],
+    "memoryNote": "Evening snack mom lovingly makes.",
+    "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.rWL93ETvtZoCFgE2_ADjnQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "title": "Palak Dal",
+    "category": "Daily",
+    "ingredients": [
+      "1/2 cup yellow lentils (toor dal)",
+      "1 cup chopped spinach",
+      "1 tbsp oil",
+      "1 tsp cumin seeds",
+      "1 onion, chopped",
+      "1/2 tsp turmeric",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Wash dal and cook with turmeric until soft.",
+      "Heat oil and crackle cumin seeds.",
+      "Add onions and sauté until golden.",
+      "Add cooked dal and mix well.",
+      "Add chopped spinach and salt.",
+      "Simmer for 5 minutes until spinach cooks.",
+      "Turn off heat and let rest.",
+      "Stir gently before serving.",
+      "Serve hot with rice or roti."
+    ],
+    "memoryNote": "Nutritious everyday lentil dish.",
+    "imageUrl": "https://th.bing.com/th/id/OIP.v5P61hsyMYG2_2fN9TctBwHaLO?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "title": "Gajar Halwa",
+    "category": "Festival",
+    "ingredients": [
+      "2 cups grated carrot",
+      "1 cup milk",
+      "2 tbsp ghee",
+      "3 tbsp sugar",
+      "2 tbsp chopped nuts",
+      "1/4 tsp cardamom powder"
+    ],
+    "steps": [
+      "Heat ghee in a pan and add grated carrot.",
+      "Cook carrots on medium heat for 5 minutes.",
+      "Add milk and simmer until milk reduces.",
+      "Stir frequently to prevent sticking.",
+      "Add sugar and cook until mixture thickens.",
+      "Add cardamom powder and mix well.",
+      "Add chopped nuts and stir.",
+      "Cook 2 more minutes and turn off heat.",
+      "Serve warm or chilled."
+    ],
+    "memoryNote": "Classic festive carrot dessert.",
+    "imageUrl": "https://media.istockphoto.com/id/1208754471/photo/gajar-ka-halwa.jpg?s=612x612&w=0&k=20&c=lfYKARLXHS2CbHtuU25uDnQQ1YMg83T_qS_eFB8wNRg="
+  },
+  {
+    "title": "Coconut Chutney",
+    "category": "Traditional",
+    "ingredients": [
+      "1 cup grated coconut",
+      "2 tbsp roasted chana dal",
+      "1 green chili",
+      "Salt to taste",
+      "Water as needed",
+      "Mustard seeds",
+      "Curry leaves",
+      "Oil"
+    ],
+    "steps": [
+      "Add coconut, chana dal, chili, salt, and water to blender.",
+      "Blend into smooth paste.",
+      "Heat oil and add mustard seeds.",
+      "Add curry leaves and let splutter.",
+      "Pour tempering over chutney.",
+      "Mix gently.",
+      "Serve fresh with dosa or idli."
+    ],
+    "memoryNote": "Traditional South Indian accompaniment.",
+    "imageUrl": "https://recipes.timesofindia.com/thumb/53540257.cms?imgsize=176114&width=800&height=800"
+  },
+  {
+    "title": "Vegetable Sandwich",
+    "category": "Daily",
+    "ingredients": [
+      "Bread slices",
+      "Butter",
+      "Boiled potato slices",
+      "Cucumber slices",
+      "Tomato slices",
+      "Green chutney",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Spread butter on bread slices.",
+      "Apply green chutney evenly.",
+      "Layer potato, cucumber, and tomato slices.",
+      "Sprinkle salt and pepper.",
+      "Cover with another slice of bread.",
+      "Cut diagonally and serve."
+    ],
+    "memoryNote": "Quick lunchbox snack.",
+    "imageUrl": "https://images.pexels.com/photos/12540688/pexels-photo-12540688.png"
+  },
+
+  {
+    "title": "Aloo Gobi",
+    "category": "Daily",
+    "ingredients": [
+      "2 cups cauliflower florets",
+      "2 medium potatoes, diced",
+      "2 tbsp vegetable oil",
+      "1 tsp cumin seeds",
+      "1 onion, finely chopped",
+      "1 tomato, chopped",
+      "1 tsp turmeric powder",
+      "1 tsp coriander powder",
+      "1 tsp garam masala",
+      "Salt to taste",
+      "Fresh cilantro for garnish"
+    ],
+    "steps": [
+      "Heat oil in a pan on medium heat.",
+      "Add cumin seeds and let them splutter.",
+      "Add onions and sauté until translucent.",
+      "Add tomatoes and cook until soft.",
+      "Stir in turmeric, coriander, and salt.",
+      "Add potatoes and cauliflower; mix well.",
+      "Cover and cook for 15–20 minutes until veggies are tender.",
+      "Sprinkle garam masala and garnish with cilantro.",
+      "Serve hot with chapati or rice."
+    ],
+    "memoryNote": "Simple home-style cauliflower and potato curry.",
+    "imageUrl": "https://th.bing.com/th/id/OIP.y_INML3PQ9jJsZ7k0OXtugHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "title": "Pav Bhaji",
+    "category": "Festival",
+    "ingredients": [
+      "2 tbsp butter",
+      "1 cup boiled mixed vegetables",
+      "1 onion, finely chopped",
+      "1 capsicum, chopped",
+      "2 tomatoes, pureed",
+      "1 tbsp pav bhaji masala",
+      "1/2 tsp turmeric",
+      "Salt to taste",
+      "8 pav buns",
+      "Lemon wedges and cilantro"
+    ],
+    "steps": [
+      "Heat butter in a pan.",
+      "Sauté onions and capsicum until soft.",
+      "Add tomato puree and cook for 5 minutes.",
+      "Add vegetables, spices, and mash well.",
+      "Simmer for 10 minutes until thick.",
+      "Toast pav with butter on a pan.",
+      "Serve bhaji with buttered pav and lemon."
+    ],
+    "memoryNote": "Popular festive street food served during gatherings.",
+    "imageUrl": "https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg"
+  },
+  {
+    "title": "Mango Lassi",
+    "category": "Festival",
+    "ingredients": [
+      "1 cup mango pulp",
+      "1 cup yogurt",
+      "1/2 cup milk",
+      "2 tbsp sugar",
+      "Ice cubes",
+      "Pinch of cardamom"
+    ],
+    "steps": [
+      "Add mango pulp, yogurt, milk, and sugar to a blender.",
+      "Blend until smooth.",
+      "Add cardamom and ice.",
+      "Pour into glasses and serve chilled."
+    ],
+    "memoryNote": "Cooling summer drink during festive lunches.",
+    "imageUrl": "https://images.pexels.com/photos/6544226/pexels-photo-6544226.jpeg"
+  },
+  {
+    "title": "Jeera Aloo",
+    "category": "Daily",
+    "ingredients": [
+      "3 potatoes, boiled and cubed",
+      "2 tbsp oil",
+      "1 tsp cumin seeds",
+      "1/2 tsp turmeric",
+      "1/2 tsp chili powder",
+      "Salt to taste",
+      "Cilantro"
+    ],
+    "steps": [
+      "Heat oil and crackle cumin seeds.",
+      "Add potatoes and spices.",
+      "Toss well and cook until lightly crispy.",
+      "Garnish with cilantro and serve."
+    ],
+    "memoryNote": "Quick everyday potato sabzi.",
+    "imageUrl":  "https://tse3.mm.bing.net/th/id/OIP.cJjS2ELPFLglbm3YZyfLsQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "title": "Veg Manchurian",
+    "category": "Festival",
+    "ingredients": [
+      "Cabbage",
+      "Carrot",
+      "Capsicum",
+      "Cornflour",
+      "All-purpose flour",
+      "Soy sauce",
+      "Ginger garlic paste",
+      "Salt",
+      "Oil"
+    ],
+    "steps": [
+      "Mix vegetables with flour and spices.",
+      "Shape into balls and deep fry.",
+      "Prepare sauce and toss fried balls.",
+      "Serve hot."
+    ],
+    "memoryNote": "Special party appetizer.",
+    "imageUrl":"https://images.pexels.com/photos/29631489/pexels-photo-29631489.jpeg"
+  },
+  {
+    "title": "Masala Corn",
+    "category": "Mom's Special",
+    "ingredients": [
+      "Boiled sweet corn",
+      "Butter",
+      "Chaat masala",
+      "Red chili powder",
+      "Salt",
+      "Lemon juice",
+      "Cilantro"
+    ],
+    "steps": [
+      "Heat butter and add corn.",
+      "Add spices and mix well.",
+      "Finish with lemon juice.",
+      "Serve warm."
+    ],
+    "memoryNote": "Mom’s quick evening snack.",
+    "imageUrl":"https://th.bing.com/th/id/OIP.SEqZ0XA4QfEL7kakyUiv0AHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "title": "Masala Chai",
+    "category": "Daily",
+    "ingredients": [
+      "Water",
+      "Milk",
+      "Tea leaves",
+      "Ginger",
+      "Cardamom",
+      "Sugar"
+    ],
+    "steps": [
+      "Boil water with spices.",
+      "Add tea and milk.",
+      "Simmer and strain.",
+      "Serve hot."
+    ],
+    "memoryNote": "Everyday comfort tea.",
+    "imageUrl":  "https://images.pexels.com/photos/20270270/pexels-photo-20270270.jpeg"
+  },
+  {
+    "title": "Vegetable Spring Rolls",
+    "category": "Festival",
+    "ingredients": [
+      "Spring roll wrappers",
+      "Cabbage",
+      "Carrot",
+      "Capsicum",
+      "Soy sauce",
+      "Oil"
+    ],
+    "steps": [
+      "Stir-fry vegetables.",
+      "Fill wrappers and roll.",
+      "Deep fry until golden.",
+      "Serve hot."
+    ],
+    "memoryNote": "Crispy snack for celebrations.",
+    "imageUrl":"https://images.pexels.com/photos/4001867/pexels-photo-4001867.jpeg"
+  },
+  {
+    "title": "Lemon Mint Mocktail",
+    "category": "Festival",
+    "ingredients": [
+      "Lemon juice",
+      "Mint leaves",
+      "Sugar",
+      "Soda",
+      "Ice"
+    ],
+    "steps": [
+      "Muddle mint with lemon and sugar.",
+      "Add ice and soda.",
+      "Stir and serve chilled."
+    ],
+    "memoryNote": "Refreshing party drink.",
+    "imageUrl": "https://images.pexels.com/photos/4021879/pexels-photo-4021879.jpeg"
+  },
+  {
+    "title": "Mixed Veg Upma",
+    "category": "Daily",
+    "ingredients": [
+      "Semolina",
+      "Mustard seeds",
+      "Onion",
+      "Carrot",
+      "Peas",
+      "Water",
+      "Salt",
+      "Cilantro"
+    ],
+    "steps": [
+      "Roast semolina lightly.",
+      "Temper mustard seeds and sauté veggies.",
+      "Add water and bring to boil.",
+      "Add semolina slowly and cook.",
+      "Garnish and serve hot."
+    ],
+    "memoryNote": "Healthy everyday breakfast.",
+    "imageUrl": "https://tastedrecipes.com/wp-content/uploads/2021/02/Veg-Upma-2.jpg"
+  }
+]
+

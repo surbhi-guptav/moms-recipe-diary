@@ -180,7 +180,7 @@ export default function DiaryBook({ recipes }: DiaryBookProps) {
     })
   };
 
-  return (
+    return (
     <motion.div 
         initial={{ opacity: 0, scale: 0.9, y: 30 }}
         animate={{ 
@@ -193,7 +193,7 @@ export default function DiaryBook({ recipes }: DiaryBookProps) {
             y: { duration: 1.2 },
             scale: { duration: 5, repeat: Infinity, ease: "easeInOut" } // Breathing cycle
         }}
-        className="flex flex-col items-center justify-center min-h-[80vh] py-20 group relative rounded-xl overflow-hidden shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]" 
+        className="flex flex-col items-center justify-center min-h-[85vh] py-12 md:py-20 group relative overflow-hidden shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]" 
         style={{
             background: `
                 radial-gradient(circle at center, #5D4037 0%, #3E2723 60%, #1a100c 100%),
@@ -206,13 +206,14 @@ export default function DiaryBook({ recipes }: DiaryBookProps) {
       <DustParticles />
 
       {/* Book Container with Navigation Overlay */}
-      <div className="relative w-full max-w-lg aspect-[2/3] perspective-1500 mx-auto transform-style-3d z-10">
+      {/* Adjusted width/aspect for mobile */}
+      <div className="relative w-[90vw] md:w-full max-w-md md:max-w-lg aspect-[3/4] md:aspect-[2/3] perspective-1500 mx-auto transform-style-3d z-10 my-4 md:my-0">
         
         {/* Bookmark Overlay - Visible on inner pages */}
         {currentPage > 0 && currentPage < pages.length - 1 && <BookmarkRibbon />}
 
-        {/* Previous Button (Left Overlay) */}
-        <div className="absolute top-1/2 -left-28 md:-left-32 transform -translate-y-1/2 z-30">
+        {/* Previous Button (Desktop: Left Overlay) */}
+        <div className="hidden md:block absolute top-1/2 -left-24 lg:-left-32 transform -translate-y-1/2 z-30">
              <button
                 onClick={() => paginate(-1)}
                 disabled={currentPage === 0}
@@ -235,8 +236,8 @@ export default function DiaryBook({ recipes }: DiaryBookProps) {
             </button>
         </div>
 
-        {/* Next Button (Right Overlay) */}
-        <div className="absolute top-1/2 -right-28 md:-right-32 transform -translate-y-1/2 z-30">
+        {/* Next Button (Desktop: Right Overlay) */}
+        <div className="hidden md:block absolute top-1/2 -right-24 lg:-right-32 transform -translate-y-1/2 z-30">
              <button
                 onClick={() => paginate(1)}
                 disabled={currentPage === pages.length - 1}
@@ -267,7 +268,7 @@ export default function DiaryBook({ recipes }: DiaryBookProps) {
             initial="enter"
             animate="center"
             exit="exit"
-            className="absolute inset-0 rounded-r-lg shadow-2xl overflow-hidden border-l-8 border-[#5D4037] origin-left bg-[#FAF3E0]"
+            className="absolute inset-0 rounded-r-lg shadow-2xl overflow-hidden border-l-4 md:border-l-8 border-[#5D4037] origin-left bg-[#FAF3E0]"
             style={{ 
                 backgroundColor: (pages[currentPage].type === 'front-cover' || pages[currentPage].type === 'back-cover') 
                     ? '#5D4037' 
@@ -282,33 +283,51 @@ export default function DiaryBook({ recipes }: DiaryBookProps) {
                variants={contentVariants}
                initial="hidden"
                animate="visible"
-               className={`h-full w-full ${pages[currentPage].type === 'front-cover' || pages[currentPage].type === 'back-cover' ? 'p-0' : 'p-8 md:p-12'}`}
+               className={`h-full w-full ${pages[currentPage].type === 'front-cover' || pages[currentPage].type === 'back-cover' ? 'p-0' : 'p-4 md:p-8 lg:p-12'}`}
             >
                 <DiaryPage page={pages[currentPage]} onNavigate={jumpToPage} />
             </motion.div>
             
             {/* Page fold effect (spine shadow) */}
             {(pages[currentPage].type !== 'front-cover' && pages[currentPage].type !== 'back-cover') && (
-                <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-black/10 to-transparent pointer-events-none" />
+                <div className="absolute inset-y-0 left-0 w-8 md:w-12 bg-gradient-to-r from-black/10 to-transparent pointer-events-none" />
             )}
              {/* Page edge effect */}
             {(pages[currentPage].type !== 'front-cover' && pages[currentPage].type !== 'back-cover') && (
-                <div className="absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-black/5 to-transparent pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-2 md:w-4 bg-gradient-to-l from-black/5 to-transparent pointer-events-none" />
             )}
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Mobile Navigation Controls - Bottom Bar */}
+      <div className="md:hidden absolute bottom-6 left-0 right-0 flex justify-center items-center gap-8 z-50">
+           <button
+                onClick={() => paginate(-1)}
+                disabled={currentPage === 0}
+                className="p-3 rounded-full bg-[#3E2723]/80 text-[#FAF3E0] backdrop-blur disabled:opacity-30 border border-[#EAC696]/20"
+           >
+               <ChevronLeft size={24} />
+           </button>
+           
+           <div className="font-serif text-[#FAF3E0] text-sm tracking-widest uppercase bg-black/30 px-4 py-1 rounded-full backdrop-blur-sm">
+             {currentPage === 0 ? "Front" : currentPage === pages.length - 1 ? "Back" : `${currentPage}/${pages.length - 2}`}
+           </div>
+
+           <button
+                onClick={() => paginate(1)}
+                disabled={currentPage === pages.length - 1}
+                className="p-3 rounded-full bg-[#3E2723]/80 text-[#FAF3E0] backdrop-blur disabled:opacity-30 border border-[#EAC696]/20"
+           >
+               <ChevronRight size={24} />
+           </button>
+      </div>
       
-      {/* Page Number Indicator */}
-      <div className="mt-10 font-serif text-ink opacity-40 text-sm tracking-widest uppercase">
+      {/* Page Number Indicator (Desktop) */}
+      <div className="hidden md:block mt-10 font-serif text-ink opacity-40 text-sm tracking-widest uppercase">
             {currentPage === 0 ? "Front Cover" : currentPage === pages.length - 1 ? "Back Cover" : `Page ${currentPage} of ${pages.length - 2}`}
       </div>
       
-      {/* Sound Toggle (Optional - Visual Only for now) */}
-      <div className="absolute bottom-4 right-4 text-xs text-ink opacity-30 hover:opacity-100 transition-opacity cursor-pointer flex items-center gap-1">
-         <span>🔊</span> Sound On
-      </div>
-
     </motion.div>
   );
 }

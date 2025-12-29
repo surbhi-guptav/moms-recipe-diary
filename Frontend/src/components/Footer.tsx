@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-parchment border-t border-golden mt-20 animate-fade-in">
-      <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-ink">
+    <footer className="bg-parchment border-t border-golden mt-12 md:mt-20 animate-fade-in">
+      <div className="container mx-auto px-4 md:px-6 py-8 md:py-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-ink">
 
         <div>
-          <h3 className="text-2xl font-serif font-bold mb-2">
+          <h3 className="text-xl md:text-2xl font-serif font-bold mb-2">
             Mom’s Recipe Diary
           </h3>
           <p className="text-sm opacity-80">

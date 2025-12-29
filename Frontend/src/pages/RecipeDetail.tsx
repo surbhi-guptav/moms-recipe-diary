@@ -56,9 +56,9 @@ export default function RecipeDetail() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20 bg-parchment">
-      <div className="container mx-auto px-6 max-w-7xl">
-        <div className="flex items-center justify-between mb-8">
+    <div className="min-h-screen pt-24 md:pt-32 pb-12 md:pb-20 bg-parchment">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 md:mb-8 gap-4">
           <button
             onClick={() => navigate("/recipes")}
             className="flex items-center gap-2 text-clay hover:opacity-80 text-lg font-medium transition-smooth"
@@ -67,11 +67,11 @@ export default function RecipeDetail() {
           </button>
           
           {isOwner && (onEdit || onDelete) && (
-            <div className="flex gap-3">
+            <div className="flex gap-3 w-full md:w-auto">
               {onEdit && (
                 <button
                   onClick={onEdit}
-                  className="flex items-center gap-2 bg-clay text-parchment px-6 py-3 rounded-full font-semibold hover:opacity-80 transition-smooth"
+                  className="flex-1 md:flex-none justify-center flex items-center gap-2 bg-clay text-parchment px-6 py-3 rounded-full font-semibold hover:opacity-80 transition-smooth"
                 >
                   <Edit size={20} />
                   Edit
@@ -80,7 +80,7 @@ export default function RecipeDetail() {
               {onDelete && (
                 <button
                   onClick={onDelete}
-                  className="flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-full font-semibold hover:opacity-80 transition-smooth"
+                  className="flex-1 md:flex-none justify-center flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-full font-semibold hover:opacity-80 transition-smooth"
                 >
                   <Trash2 size={20} />
                   Delete
@@ -91,21 +91,21 @@ export default function RecipeDetail() {
         </div>
 
         {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           
           {/* Left Column - Image and Ingredients */}
-          <div className="lg:col-span-1 flex flex-col gap-8">
+          <div className="lg:col-span-1 flex flex-col gap-6 md:gap-8">
             {/* Image */}
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <img
                 src={imageUrl}
                 alt={recipe.title}
-                className="w-full h-96 object-cover"
+                className="w-full h-64 md:h-96 object-cover"
               />
             </div>
 
             {/* Ingredients Section */}
-            <div className="paper-texture bg-paper rounded-2xl p-8 shadow-md">
+            <div className="paper-texture bg-paper rounded-2xl p-6 md:p-8 shadow-md">
               <h2 className="text-2xl font-serif font-bold mb-6 text-ink">
                 Ingredients
               </h2>
@@ -124,12 +124,12 @@ export default function RecipeDetail() {
           </div>
 
           {/* Right Column - Title and Instructions */}
-          <div className="lg:col-span-2 flex flex-col gap-8">
+          <div className="lg:col-span-2 flex flex-col gap-6 md:gap-8">
             {/* Title Section */}
             <div>
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-4">
                 <span
-                    className={`inline-block mb-4 px-5 py-2 ${
+                    className={`inline-block mb-2 md:mb-4 px-5 py-2 ${
                     categoryColors[recipe.category] || categoryColors['Daily']
                     } rounded-full text-sm font-semibold`}
                 >
@@ -137,7 +137,7 @@ export default function RecipeDetail() {
                 </span>
 
                 {/* Like Button */}
-                <button onClick={handleLike} className="flex items-center gap-2 text-clay hover:opacity-80 transition-smooth border border-clay px-4 py-2 rounded-full">
+                <button onClick={handleLike} className="flex items-center gap-2 text-clay hover:opacity-80 transition-smooth border border-clay px-4 py-2 rounded-full mb-2 md:mb-4">
                     <Heart 
                         className={recipe.likes?.some(id => id.toString() === userId) ? "fill-current text-red-500" : ""} 
                         size={24} 
@@ -146,34 +146,34 @@ export default function RecipeDetail() {
                 </button>
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-serif font-bold text-ink">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-ink leading-tight">
                 {recipe.title}
               </h1>
             </div>
 
             {/* Instructions Section */}
-            <div className="paper-texture bg-paper rounded-2xl p-8 shadow-md">
-              <div className="flex items-center justify-between mb-8">
+            <div className="paper-texture bg-paper rounded-2xl p-6 md:p-8 shadow-md">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
                 <h2 className="text-2xl font-serif font-bold text-ink">
                     Instructions
                 </h2>
                 <button
                     onClick={() => setIsCooking(true)}
-                    className="flex items-center gap-2 bg-clay text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition-smooth shadow-md hover:shadow-lg"
+                    className="w-full sm:w-auto justify-center flex items-center gap-2 bg-clay text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition-smooth shadow-md hover:shadow-lg"
                 >
                     <ChefHat size={20} /> Start Cooking
                 </button>
               </div>
               <div className="space-y-6">
                 {recipe.steps.map((step, i) => (
-                  <div key={i} className="flex gap-6 items-start">
+                  <div key={i} className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-clay text-parchment font-bold text-lg">
+                      <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-clay text-parchment font-bold text-lg">
                         {i + 1}
                       </div>
                     </div>
                     <div className="flex-grow pt-1">
-                      <p className="text-lg text-ink leading-relaxed">{step}</p>
+                      <p className="text-base md:text-lg text-ink leading-relaxed">{step}</p>
                     </div>
                   </div>
                 ))}
