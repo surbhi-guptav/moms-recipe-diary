@@ -9,7 +9,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://momsrecipe-diary.netlify.app/recipes"
+    "https://momsrecipe-diary.netlify.app"
   ],
   credentials: true
 }));
